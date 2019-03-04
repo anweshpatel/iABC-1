@@ -3,6 +3,7 @@
  * BasicHTTPClient.ino
  *
  *  Created on: 29.08.2018
+ *  Modified : 04.03.2019
  *  
  *  Anwesh Anjan Patel
  *  
@@ -38,7 +39,7 @@ void setup() {
     }
 
     WiFi.mode(WIFI_STA);
-    WiFiMulti.addAP("Nokia 6.1", "conv0142");
+    WiFiMulti.addAP("<ssid>", "<psk>");
 
 }
 
@@ -51,8 +52,7 @@ void loop() {
         USE_SERIAL.print("[HTTP] begin...\n");
         
         // configure server and url
-        //http.begin("http://api.thingspeak.com/channels/565397/fields/1.json?api_key=P8R8KTQ6DQ5UO117&results=1"); //HTTP
-        http.begin("http://192.168.43.218:8080/iot?reqtype=fetch");
+        http.begin("http://<ip-addr>:8080/iot?reqtype=fetch"); //HTTP
         
         USE_SERIAL.print("[HTTP] GET...\n");
         // start connection and send HTTP header
