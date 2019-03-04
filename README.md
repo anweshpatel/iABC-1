@@ -15,17 +15,17 @@ To run the server, start the ./restfulserver/app.py using python 3
 
 In the arduino ```.ino``` files, replace ```< ... >``` tokens with suitable values
 
-## Try LED on/off from browser
+### Try LED on/off from browser
 
-### 1. Start the server
+#### 1. Start the server
 
 Use the method stated above
 
-### 2. Flash the ESP8266 with the BasicHttpClient_Get code using arduino IDE
+#### 2. Flash the ESP8266 with the BasicHttpClient_Get code using arduino IDE
 
 Change the tokens as mentioned before
 
-### 3. Try to open a browser on your computer and hit the url
+#### 3. Try to open a browser on your computer and hit the url
 
 To turn on, replace 7 by any number greater than 0
 
@@ -35,6 +35,15 @@ Then try
 
   http://localhost:8080/iot?reqtype=update&led=0
 
-### ----------------------------------------
-
 *** Always have a serial monitor open in arduino to analyse the program ***
+
+### Check IP Address of your system
+
+For Linux users
+```
+  $ ifconfig
+```
+
+For windows users:-
+1. You can find it using network connection details (IPv4 address)
+2. You can use the ```gip``` command on PowerShell
