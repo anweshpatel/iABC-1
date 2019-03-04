@@ -2,10 +2,11 @@
  * BasicHTTPClient.ino
  *
  *  Created on: 29.08.2018
+ *  Modified : 04.03.2019
  *  
  *  Anwesh Anjan Patel
  *  
- *  GET data from the server and turn the LED on/off
+ *  Update data to the server
  *
  */
 
@@ -54,7 +55,8 @@ void loop() {
 
         //String UP_url = "http://api.thingspeak.com/update?api_key=K2MVSQ0PEVITCK98&field2=";
         //String url = UP_url + var;
-        //String url = "<ip_addr>:8080/iot?";
+        String UP_url = "<ip_addr>:8080/iot?reqtype=update&led=";
+        String url = UP_url + (var>5?1:0); //Turn LED on if counter goes above 5
         USE_SERIAL.print("[HTTP] begin...\n");
         
         // configure server and url
