@@ -35,5 +35,6 @@ Then try
 
   http://localhost:8080/iot?reqtype=update&led=0
 
-# ----------------------------------------
+### ----------------------------------------
 
+*** Always have a serial monitor open in arduino to analyse the program ***
