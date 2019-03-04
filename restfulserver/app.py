@@ -1,3 +1,8 @@
+'''
+author : @anweshpatel
+date : 04/03/2019
+title : simple RESTful api for iot
+'''
 import flask
 from flask import request, jsonify
 
